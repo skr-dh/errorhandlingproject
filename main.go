@@ -37,6 +37,7 @@ func (b baseHandler) ServeHTTP(writer http.ResponseWriter, request *http.Request
 		}
 	} else {
 		// general/unhandled errors that might occur
+		// log here as well, common ingestion place
 		writer.WriteHeader(500)
 		// may be construct a response body a common one for all Internal server errors
 		return
